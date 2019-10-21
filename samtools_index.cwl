@@ -17,7 +17,9 @@ outputs:
   - id: bam_index
     type: File
     outputBinding:
-      glob: '*.bai'
+      glob: '*.bam'
+    secondaryFiles:
+      - '.bam.bai'
 requirements:
   - class: ResourceRequirement
     ramMin: 32000
